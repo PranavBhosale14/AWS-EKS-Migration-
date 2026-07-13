@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Containerization & CI/CD</title>
+
+<link rel="stylesheet" href="../css/cicd.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+
+    <div class="header">
+
+        <h1>
+            <i class="fa-brands fa-docker"></i>
+            Containerization & CI/CD Pipeline
+        </h1>
+
+        <p>
+            Automate Build, Test and Deployment of Microservices
+        </p>
+
+    </div>
+
+    <!-- Pipeline -->
+
+    <div class="pipeline">
+
+        <div class="step">
+
+            <i class="fa-brands fa-github"></i>
+
+            <h3>GitHub</h3>
+
+            <p>Push Code</p>
+
+        </div>
+
+        <div class="arrow">
+            ➜
+        </div>
+
+        <div class="step">
+
+            <i class="fa-solid fa-code-branch"></i>
+
+            <h3>CI Server</h3>
+
+            <p>Build & Test</p>
+
+        </div>
+
+        <div class="arrow">
+            ➜
+        </div>
+
+        <div class="step">
+
+            <i class="fa-brands fa-docker"></i>
+
+            <h3>Docker</h3>
+
+            <p>Create Images</p>
+
+        </div>
+
+        <div class="arrow">
+            ➜
+        </div>
+
+        <div class="step">
+
+            <i class="fa-solid fa-box"></i>
+
+            <h3>Amazon ECR</h3>
+
+            <p>Push Images</p>
+
+        </div>
+
+        <div class="arrow">
+            ➜
+        </div>
+
+        <div class="step">
+
+            <i class="fa-brands fa-aws"></i>
+
+            <h3>Amazon EKS</h3>
+
+            <p>Deploy</p>
+
+        </div>
+
+    </div>
+
+    <!-- Statistics -->
+
+    <div class="cards">
+
+        <div class="card">
+
+            <i class="fa-solid fa-cube"></i>
+
+            <h2>24</h2>
+
+            <p>Docker Images</p>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fa-solid fa-code"></i>
+
+            <h2>180</h2>
+
+            <p>Builds</p>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fa-solid fa-check"></i>
+
+            <h2>97%</h2>
+
+            <p>Success Rate</p>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fa-solid fa-clock"></i>
+
+            <h2>3 min</h2>
+
+            <p>Deploy Time</p>
+
+        </div>
+
+    </div>
+
+    <!-- Docker Images -->
+
+    <div class="table-card">
+
+        <h2>Docker Images</h2>
+
+        <table>
+
+            <tr>
+
+                <th>Image</th>
+
+                <th>Version</th>
+
+                <th>Status</th>
+
+            </tr>
+
+            <tr>
+
+                <td>user-service</td>
+
+                <td>v1.2.0</td>
+
+                <td>Ready</td>
+
+            </tr>
+
+            <tr>
+
+                <td>order-service</td>
+
+                <td>v2.0.1</td>
+
+                <td>Ready</td>
+
+            </tr>
+
+            <tr>
+
+                <td>payment-service</td>
+
+                <td>v1.8.0</td>
+
+                <td>Ready</td>
+
+            </tr>
+
+            <tr>
+
+                <td>ai-service</td>
+
+                <td>v3.0.0</td>
+
+                <td>Ready</td>
+
+            </tr>
+
+        </table>
+
+    </div>
+
+    <!-- Build Progress -->
+
+    <div class="progress-card">
+
+        <h2>Current Deployment</h2>
+
+        <div class="progress">
+
+            <div id="buildBar"></div>
+
+        </div>
+
+        <h3 id="buildText">0%</h3>
+
+    </div>
+
+</div>
+
+<script src="../js/cicd.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>API Gateway</title>
+
+<link rel="stylesheet" href="../css/gateway.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+
+        <h1>
+            <i class="fa-solid fa-network-wired"></i>
+            API Gateway & Service Communication
+        </h1>
+
+        <p>Manage routing, authentication and communication between microservices.</p>
+
+    </div>
+
+    <!-- Statistics -->
+
+    <div class="stats">
+
+        <div class="card">
+            <i class="fa-solid fa-link"></i>
+            <h2>56</h2>
+            <p>API Endpoints</p>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-right-left"></i>
+            <h2>24K</h2>
+            <p>Daily Requests</p>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-shield-halved"></i>
+            <h2>JWT</h2>
+            <p>Authentication</p>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-heart-pulse"></i>
+            <h2>99.9%</h2>
+            <p>Availability</p>
+        </div>
+
+    </div>
+
+    <!-- Architecture -->
+
+    <div class="section">
+
+        <h2>Request Flow</h2>
+
+        <div class="flow">
+
+            <div class="box">Client</div>
+
+            <div class="arrow">➜</div>
+
+            <div class="box active">API Gateway</div>
+
+            <div class="arrow">➜</div>
+
+            <div class="box">Auth</div>
+
+            <div class="arrow">➜</div>
+
+            <div class="box">Microservices</div>
+
+        </div>
+
+    </div>
+
+    <!-- API Table -->
+
+    <div class="section">
+
+        <h2>REST API Endpoints</h2>
+
+        <table>
+
+            <tr>
+                <th>Endpoint</th>
+                <th>Method</th>
+                <th>Status</th>
+            </tr>
+
+            <tr>
+                <td>/login</td>
+                <td>POST</td>
+                <td>Online</td>
+            </tr>
+
+            <tr>
+                <td>/users</td>
+                <td>GET</td>
+                <td>Online</td>
+            </tr>
+
+            <tr>
+                <td>/orders</td>
+                <td>POST</td>
+                <td>Online</td>
+            </tr>
+
+            <tr>
+                <td>/payments</td>
+                <td>POST</td>
+                <td>Online</td>
+            </tr>
+
+            <tr>
+                <td>/predict</td>
+                <td>POST</td>
+                <td>Online</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+    <!-- Features -->
+
+    <div class="section">
+
+        <h2>Gateway Features</h2>
+
+        <div class="features">
+
+            <div class="feature">JWT Authentication</div>
+            <div class="feature">HTTPS Encryption</div>
+            <div class="feature">Load Balancing</div>
+            <div class="feature">Rate Limiting</div>
+            <div class="feature">Request Routing</div>
+            <div class="feature">Service Discovery</div>
+
+        </div>
+
+    </div>
+
+    <!-- Traffic -->
+
+    <div class="section">
+
+        <h2>Traffic Load</h2>
+
+        <p>Incoming Requests</p>
+
+        <div class="progress">
+            <div class="traffic"></div>
+        </div>
+
+        <p>Gateway Usage</p>
+
+        <div class="progress">
+            <div class="gateway"></div>
+        </div>
+
+        <p>Deployment Progress</p>
+
+        <div class="progress">
+            <div id="deploy"></div>
+        </div>
+
+        <h3 id="percent">0%</h3>
+
+    </div>
+
+</div>
+
+<script src="../js/gateway.js"></script>
+
+</body>
+</html>

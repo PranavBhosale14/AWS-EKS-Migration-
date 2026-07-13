@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+
+if(localStorage.getItem("login")!=="true"){
+
+window.location.href="login.html";
+
+}
+
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AWS EKS Migration Dashboard</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <div class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-brands fa-aws"></i>
+
+            <h2>AWS EKS</h2>
+
+            <p>Migration Portal</p>
+
+        </div>
+
+        <ul>
+
+            <li class="active" data-page="modules/welcome.html">
+                <i class="fa-solid fa-house"></i>
+                <span>Home</span>
+            </li>
+
+            <li data-page="modules/requirement.html">
+                <i class="fa-solid fa-list-check"></i>
+                <span>Requirement Analysis</span>
+            </li>
+
+            <li data-page="modules/decomposition.html">
+                <i class="fa-solid fa-diagram-project"></i>
+                <span>Application Decomposition</span>
+            </li>
+
+            <li data-page="modules/eks.html">
+                <i class="fa-solid fa-cloud"></i>
+                <span>AWS EKS Cluster</span>
+            </li>
+
+            <li data-page="modules/cicd.html">
+                <i class="fa-brands fa-docker"></i>
+                <span>Containerization & CI/CD</span>
+            </li>
+
+            <li data-page="modules/ai.html">
+                <i class="fa-solid fa-robot"></i>
+                <span>AI / ML Integration</span>
+            </li>
+
+            <li data-page="modules/gateway.html">
+                <i class="fa-solid fa-network-wired"></i>
+                <span>API Gateway</span>
+            </li>
+
+            <li data-page="modules/monitoring.html">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Monitoring & Security</span>
+            </li>
+
+            <li data-page="modules/testing.html">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Testing & Reporting</span>
+            </li>
+            <li <button onclick="logout()" class="logout-btn">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            Logout
+            </button>
+            </li>
+
+        </ul>
+
+    </div>
+
+    <!-- Content -->
+
+    <div class="content">
+
+        <iframe
+            id="frame"
+            src="modules/welcome.html"
+            frameborder="0">
+        </iframe>
+
+    </div>
+
+</div>
+
+<script src="js/dashboard.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AWS EKS Cluster</title>
+
+<link rel="stylesheet" href="../css/eks.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h1><i class="fa-brands fa-aws"></i> AWS EKS Cluster Setup & Migration</h1>
+        <p>Deploy containerized microservices on Amazon EKS.</p>
+    </div>
+
+    <div class="status">
+
+        <div class="status-card">
+            <i class="fa-solid fa-cloud"></i>
+            <h2>1</h2>
+            <p>EKS Cluster</p>
+        </div>
+
+        <div class="status-card">
+            <i class="fa-solid fa-server"></i>
+            <h2>4</h2>
+            <p>Worker Nodes</p>
+        </div>
+
+        <div class="status-card">
+            <i class="fa-solid fa-cubes"></i>
+            <h2>18</h2>
+            <p>Running Pods</p>
+        </div>
+
+        <div class="status-card">
+            <i class="fa-solid fa-network-wired"></i>
+            <h2>8</h2>
+            <p>Services</p>
+        </div>
+
+    </div>
+
+    <div class="grid">
+
+        <div class="card">
+
+            <h2>Cluster Architecture</h2>
+
+            <div class="diagram">
+
+                <div class="box">Users</div>
+                <div class="arrow">↓</div>
+
+                <div class="box orange">AWS Load Balancer</div>
+                <div class="arrow">↓</div>
+
+                <div class="box">Amazon EKS</div>
+                <div class="arrow">↓</div>
+
+                <div class="row">
+
+                    <div class="mini">Node 1</div>
+                    <div class="mini">Node 2</div>
+                    <div class="mini">Node 3</div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <h2>Cluster Health</h2>
+
+            <div class="health">
+
+                <p>CPU Usage</p>
+
+                <div class="progress">
+                    <div class="cpu"></div>
+                </div>
+
+                <p>Memory Usage</p>
+
+                <div class="progress">
+                    <div class="memory"></div>
+                </div>
+
+                <p>Pod Availability</p>
+
+                <div class="progress">
+                    <div class="pods"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Namespaces</h2>
+
+        <table>
+
+            <tr>
+                <th>Name</th>
+                <th>Pods</th>
+                <th>Status</th>
+            </tr>
+
+            <tr>
+                <td>default</td>
+                <td>6</td>
+                <td>Running</td>
+            </tr>
+
+            <tr>
+                <td>production</td>
+                <td>8</td>
+                <td>Running</td>
+            </tr>
+
+            <tr>
+                <td>monitoring</td>
+                <td>4</td>
+                <td>Healthy</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Deployment Progress</h2>
+
+        <div class="progress">
+
+            <div id="deployBar"></div>
+
+        </div>
+
+        <h3 id="deployText">0%</h3>
+
+    </div>
+
+</div>
+
+<script src="../js/eks.js"></script>
+
+</body>
+</html>

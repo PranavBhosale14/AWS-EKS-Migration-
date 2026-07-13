@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Application Decomposition</title>
+
+<link rel="stylesheet" href="../css/decomposition.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="title">
+        <h1>Application Decomposition (Microservices)</h1>
+        <p>Break the monolithic application into independent cloud-native services.</p>
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <i class="fa-solid fa-user"></i>
+            <h3>User Service</h3>
+            <p>Manage user profiles and accounts.</p>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-lock"></i>
+            <h3>Authentication</h3>
+            <p>Login, JWT and authorization.</p>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <h3>Order Service</h3>
+            <p>Process customer orders.</p>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-credit-card"></i>
+            <h3>Payment Service</h3>
+            <p>Payment processing.</p>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-bell"></i>
+            <h3>Notification</h3>
+            <p>Email & SMS alerts.</p>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-robot"></i>
+            <h3>AI Service</h3>
+            <p>Prediction & inference.</p>
+        </div>
+
+    </div>
+
+    <div class="section">
+
+        <h2>Microservice Architecture</h2>
+
+        <div class="flow">
+
+            <div class="box">Client</div>
+            <span>➜</span>
+
+            <div class="box">API Gateway</div>
+            <span>➜</span>
+
+            <div class="box">Microservices</div>
+            <span>➜</span>
+
+            <div class="box">Databases</div>
+
+        </div>
+
+    </div>
+
+    <div class="section">
+
+        <h2>Service Communication</h2>
+
+        <table>
+
+            <tr>
+                <th>Service</th>
+                <th>API</th>
+                <th>Method</th>
+            </tr>
+
+            <tr>
+                <td>User</td>
+                <td>/users</td>
+                <td>GET</td>
+            </tr>
+
+            <tr>
+                <td>Authentication</td>
+                <td>/login</td>
+                <td>POST</td>
+            </tr>
+
+            <tr>
+                <td>Orders</td>
+                <td>/orders</td>
+                <td>POST</td>
+            </tr>
+
+            <tr>
+                <td>Payments</td>
+                <td>/payments</td>
+                <td>POST</td>
+            </tr>
+
+            <tr>
+                <td>AI Service</td>
+                <td>/predict</td>
+                <td>POST</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+    <div class="section">
+
+        <h2>Independent Databases</h2>
+
+        <div class="database">
+
+            <div class="db">User DB</div>
+            <div class="db">Order DB</div>
+            <div class="db">Payment DB</div>
+            <div class="db">AI Model DB</div>
+
+        </div>
+
+    </div>
+
+    <div class="section">
+
+        <h2>Migration Progress</h2>
+
+        <div class="progress">
+            <div class="fill" id="fill"></div>
+        </div>
+
+        <h3 id="percent">0%</h3>
+
+    </div>
+
+</div>
+
+<script src="../js/decomposition.js"></script>
+
+</body>
+</html>
